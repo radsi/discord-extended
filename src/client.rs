@@ -186,7 +186,13 @@ async fn create_discord_client(settings: &DiscordSettings) -> Result<DiscordIpcC
 
 		rpc.emit_command(&SentCommand::Authorize(AuthorizeArgs {
 			client_id: settings.client_id.clone(),
-			scopes: vec!["rpc".to_owned(), "identify".to_owned()],
+			scopes: vec![
+				"rpc".to_owned(),
+				"rpc.voice.write".to_owned(),
+				"rpc.video.write".to_owned(),
+				"rpc.screenshare.write".to_owned(),
+				"identify".to_owned(),
+			],
 			rpc_token: None,
 			username: None,
 		}))
