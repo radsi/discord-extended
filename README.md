@@ -1,5 +1,9 @@
 ## OpenAction Discord plugin
 
+### This fork adds actions for undocumented RPC commands such as screenshare, camera and soundboard
+
+
+
 An OpenAction ([OpenDeck](https://github.com/nekename/OpenDeck) / [Tacto](https://tacto.rivul.us)) plugin for controlling the Discord desktop client
 
 > [!WARNING]
