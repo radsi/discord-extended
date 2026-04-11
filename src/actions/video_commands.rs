@@ -41,14 +41,6 @@ impl Action for ToggleScreenshareAction {
 			None
 		};
 
-		let pid = match focus_pid {
-			Some(p) => p,
-			None => {
-				instance.show_alert().await?;
-				return Ok(());
-			}
-		};
-
 		let mut client_lock = discord_client().write().await;
 		let Some(client) = client_lock.as_mut() else {
 			log::error!("Discord client not initialized");
@@ -56,12 +48,17 @@ impl Action for ToggleScreenshareAction {
 			return Ok(());
 		};
 
+		let nonce = match focus_pid {
+			Some(pid) => format!("toggle-screenshare-{pid}"),
+			None => String::from("toggle-screenshare"),
+		};
+
 		let payload = json!({
 			"cmd": "TOGGLE_SCREENSHARE",
 			"args": {
-				"pid": pid,
+				"pid": focus_pid,
 			},
-			"nonce": format!("toggle-screenshare-{}", pid),
+			"nonce": nonce,
 		});
 
 		let payload_text = match serde_json::to_string(&payload) {
