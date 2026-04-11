@@ -81,6 +81,31 @@
       "DisableAutomaticStates": true,
       "SupportedInMultiActions": true,
       "States": [{ "Image": "actions/soundboard" }]
+    },
+    {
+      "UUID": "me.radsi.oadiscord.togglescreenshare",
+      "Name": "Toggle Screen Share",
+      "Icon": "actions/screenshare",
+      "Tooltip": "Toggle screen sharing",
+      "Controllers": ["Keypad"],
+      "PropertyInspectorPath": "pi/simple.html",
+      "DisableAutomaticStates": true,
+      "SupportedInMultiActions": true,
+      "States": [
+        { "Image": "actions/stream_0" },
+        { "Image": "actions/stream_1" }
+      ]
+    },
+    {
+      "UUID": "me.radsi.oadiscord.togglevideo",
+      "Name": "Toggle Camera",
+      "Icon": "actions/video",
+      "Tooltip": "Toggle video",
+      "Controllers": ["Keypad"],
+      "PropertyInspectorPath": "pi/simple.html",
+      "DisableAutomaticStates": true,
+      "SupportedInMultiActions": true,
+      "States": [{ "Image": "actions/video_0" }, { "Image": "actions/video_1" }]
     }
   ]
 }
