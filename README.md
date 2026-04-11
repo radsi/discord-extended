@@ -16,3 +16,5 @@ An OpenAction ([OpenDeck](https://github.com/nekename/OpenDeck) / [Tacto](https:
 - Push to Mute
 - Push to Talk
 - Play soundboard sound
+- Toggle camera
+- Toggle screenshare
