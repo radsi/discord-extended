@@ -72,7 +72,7 @@
     {
       "UUID": "me.radsi.oadiscord.togglescreenshare",
       "Name": "Toggle Screen Share",
-      "Icon": "actions/screenshare",
+      "Icon": "actions/screenshare_0",
       "Tooltip": "Toggle screen sharing",
       "Controllers": ["Keypad"],
       "PropertyInspectorPath": "pi/simple.html",
@@ -83,7 +83,7 @@
     {
       "UUID": "me.radsi.oadiscord.togglevideo",
       "Name": "Toggle Camera",
-      "Icon": "actions/video",
+      "Icon": "actions/video_0",
       "Tooltip": "Toggle video",
       "Controllers": ["Keypad"],
       "PropertyInspectorPath": "pi/simple.html",
